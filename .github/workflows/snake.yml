@@ -3,27 +3,40 @@ name: Generate Snake
 on:
   schedule:
     - cron: "0 */12 * * *"   # jalan tiap 12 jam
-  workflow_dispatch:          # bisa dijalankan manual juga
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repo (main)
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0   # wajib biar ada history git
+          fetch-depth: 0
 
       - name: Generate snake.svg
         uses: Platane/snk@v3
         with:
-          github_user_name: habibdani   # ganti sesuai username GitHub kamu
+          github_user_name: habibdani
           outputs: dist/snake.svg
 
-      - name: Push snake.svg to output branch
+      - name: Checkout repo (output branch)
+        uses: actions/checkout@v3
+        with:
+          ref: output
+          fetch-depth: 0
+          path: output-branch
+
+      - name: Copy generated file
+        run: |
+          mkdir -p output-branch
+          cp -f dist/snake.svg output-branch/snake.svg
+
+      - name: Commit and push to output branch
         uses: EndBug/add-and-commit@v9
         with:
-          add: "dist/snake.svg"
+          cwd: output-branch
+          add: "snake.svg"
           message: "Generate snake animation"
           new_branch: output
           push: origin output --force
