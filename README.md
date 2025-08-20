@@ -95,7 +95,7 @@
 * 🐍 *Snake eating my contributions*:
 
 ```md
-![Snake animation](https://raw.githubusercontent.com/habibdani/habibdani/snake.svg)
+![Snake animation](https://raw.githubusercontent.com/habibdani/habibdani/output/snake.svg)
 ```
 
 ---
