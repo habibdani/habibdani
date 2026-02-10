@@ -14,7 +14,7 @@
 * 🛠️ Tech favorit: **Java Spring Boot, Golang, PHP**
 * 📚 Saat ini belajar: **Microservices, Cloud Deployment, Kubernetes**
 * 🤝 Terbuka untuk kolaborasi pada: **open-source, freelance, atau riset**
-* ✉️ Kontak: **[habibdani@gmial.com](mailto:habibdani8@gmail.com)**
+* ✉️ Kontak: **[habibdani86@gmial.com](mailto:habibdani86@gmail.com)**
 * 🌐 Website/Portfolio: **[https://habibdani.com](https://habibdani.com)**
 
 ---
